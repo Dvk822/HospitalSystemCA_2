@@ -62,19 +62,9 @@ public class Main {
     }
 
     private static MenuOption getUserChoice() {
-        int input = -1;
-    while (input < 1 || input > MenuOption.values().length) {
-        try {
-            input = Integer.parseInt(scanner.nextLine());
-            if (input < 1 || input > MenuOption.values().length) {
-                System.out.println("❌ Invalid choice. Please select a valid option (1-" + MenuOption.values().length + ").");
-            }
-        } catch (NumberFormatException e) {
-            System.out.println("❌ Invalid input. Please enter a number.");
-        }
+        int input = Integer.parseInt(scanner.nextLine());
+        return MenuOption.values()[input - 1]; // Just works if menu order matches enum order
     }
-    return MenuOption.values()[input - 1];
-}
 
     private static void addEmployee() {
         System.out.print("Enter employee name: ");
@@ -90,15 +80,18 @@ public class Main {
 
     private static Manager chooseManager() {
         System.out.println("Choose Manager Type:");
-        for (int i = 0; i < managerTypes.length; i++) {
-            System.out.println((i + 1) + ". " + managerTypes[i]);
-        }
-        int choice = Integer.parseInt(scanner.nextLine());
-        return new Manager(managerTypes[choice - 1]);
+    for (int i = 0; i < managerTypes.length; i++) {
+        System.out.println((i + 1) + ". " + managerTypes[i]);
+    }
+    int choice = Integer.parseInt(scanner.nextLine());
+
+    System.out.print("Enter the manager's phone number: ");
+    String phoneNumber = scanner.nextLine();
+    return new Manager(managerTypes[choice - 1], phoneNumber);
     }
 
     private static Department chooseDepartment() {
-        System.out.println("Please Choose your Department:");
+        System.out.println("Please Choose Department:");
         for (int i = 0; i < departments.length; i++) {
             System.out.println((i + 1) + ". " + departments[i]);
         }
@@ -210,15 +203,13 @@ public class Main {
     }
 }
   private static void viewAllEmployees() {
-      if (employeeList.isEmpty()) {
+    if (employeeList.isEmpty()) {
         System.out.println("No employees found.");
         return;
     }
 
-    System.out.println("Total number of employees: " + employeeList.size());
     for (int i = 0; i < employeeList.size(); i++) {
         System.out.println((i + 1) + ". " + employeeList.get(i));
     }
 }
-  }
-    
+}
