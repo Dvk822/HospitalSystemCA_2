@@ -50,14 +50,13 @@ public class Main {
     }
 
     private static void displayMenu() {
-        System.out.println("===============================");
-        System.out.println("1. Add Employee");
-        System.out.println("2. Welcome to the Hospital System");
-        System.out.println("3. Sort Employees (by name)");
-        System.out.println("4. Search Employee by Name");
-        System.out.println("5. Load Employees from File");
-        System.out.println("6. View All Employees");
-        System.out.println("7. Exit");
+        System.out.println("\n--- Hospital Staff Management Menu ---");
+        System.out.println("1. Add Employee (Name, Role, Department)");
+        System.out.println("2. Generate Random Employees");
+        System.out.println("3. S3. Sort Employee List");
+        System.out.println("4. Search Employee Name");
+        System.out.println("5. Exit");
+        
 
 
     }
