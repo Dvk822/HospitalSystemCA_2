@@ -200,13 +200,15 @@ public class Main {
     }
 }
   private static void viewAllEmployees() {
-    if (employeeList.isEmpty()) {
+      if (employeeList.isEmpty()) {
         System.out.println("No employees found.");
         return;
     }
 
+    System.out.println("Total number of employees: " + employeeList.size());
     for (int i = 0; i < employeeList.size(); i++) {
         System.out.println((i + 1) + ". " + employeeList.get(i));
     }
 }
-}
+  }
+    
