@@ -30,7 +30,7 @@ public class Main {
                     break;
                 case SORT_EMPLOYEES:
                     sortEmployees(); // will add later
-                    // sorting logic
+                    // Sort employee list by name using merge sort
                     break;
                 case SEARCH_EMPLOYEE:
                     searchEmployee(); // will add later
