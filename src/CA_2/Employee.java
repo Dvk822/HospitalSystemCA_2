@@ -8,6 +8,7 @@ package CA_2;
  *
  * @author acer
  */
+//Represents a hospital employee
 public class Employee { 
     private String name;
     private Manager manager;
