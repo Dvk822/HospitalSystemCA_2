@@ -62,9 +62,19 @@ public class Main {
     }
 
     private static MenuOption getUserChoice() {
-        int input = Integer.parseInt(scanner.nextLine());
-        return MenuOption.values()[input - 1]; // Just works if menu order matches enum order
+        int input = -1;
+    while (input < 1 || input > MenuOption.values().length) {
+        try {
+            input = Integer.parseInt(scanner.nextLine());
+            if (input < 1 || input > MenuOption.values().length) {
+                System.out.println("❌ Invalid choice. Please select a valid option (1-" + MenuOption.values().length + ").");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("❌ Invalid input. Please enter a number.");
+        }
     }
+    return MenuOption.values()[input - 1];
+}
 
     private static void addEmployee() {
         System.out.print("Enter employee name: ");
