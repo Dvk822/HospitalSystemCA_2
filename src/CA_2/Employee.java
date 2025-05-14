@@ -45,8 +45,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee Name: " + name +
-               " | Manager Type: " + manager +
-               " | Department: " + department;
+        return name + " – " + role + " – " + dept;
     }
 }
