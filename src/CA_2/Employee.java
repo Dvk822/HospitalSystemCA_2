@@ -8,7 +8,7 @@ package CA_2;
  *
  * @author acer
  */
-public class Employee {
+public class Employee { 
     private String name;
     private Manager manager;
     private Department department;
@@ -45,6 +45,8 @@ public class Employee {
 
     @Override
     public String toString() {
-        return name + " – " + role + " – " + dept;
+        return "Employee Name: " + name +
+               " | Manager Type: " + manager +
+               " | Department: " + department;
     }
 }

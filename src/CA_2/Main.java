@@ -88,7 +88,7 @@ public class Main {
     }
 
     private static Department chooseDepartment() {
-        System.out.println("Choose Department:");
+        System.out.println("Please Choose your Department:");
         for (int i = 0; i < departments.length; i++) {
             System.out.println((i + 1) + ". " + departments[i]);
         }
