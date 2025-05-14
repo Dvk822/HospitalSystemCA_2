@@ -50,9 +50,9 @@ public class Main {
     }
 
     private static void displayMenu() {
-        System.out.println("\n--- Hospital Staff Management Menu ---");
+        System.out.println("===============================");
         System.out.println("1. Add Employee");
-        System.out.println("2. Generate Random Employee");
+        System.out.println("2. Welcome to the Hospital System");
         System.out.println("3. Sort Employees (by name)");
         System.out.println("4. Search Employee by Name");
         System.out.println("5. Load Employees from File");
